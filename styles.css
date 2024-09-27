@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+    grid-gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.grid-item {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 50%; /* Make the grid items circular */
+    cursor: pointer;
+    font-size: 24px;
+    transition: border-color 0.3s;
+
+}
+
+.grid-item.selected {
+    border-color: #007bff; /* Blue border when selected */
+}
+
+.grid-item.correct {
+    border-color: #1ecc27; /* Blue border when selected */
+}
+
+.grid-item.spangram {
+    border-color: #ebe71d; /* Blue border when selected */
+}
+
+.feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* Strands Clue Box */
+.clue{
+    width: 350px;
+    border-radius: 8px;
+    border: 1px solid #bcbcbc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0
+}
+
+.clue-label{
+    font-feature-settings: "clig" off,"liga" off;
+    font-family: nyt-franklin,Arial;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: .96px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 7px 7px 0px 0px;
+    background: #aedfee;
+    margin: 0;
+}
+
+.clue-label h3{
+    margin: 2px 0;
+}
+
+.clue-hint {
+    margin: 5px 0;
+}
+
+.check-button {
+    width: 100px;
+    border-radius: 8px;
+    background-color: black;
+}
+
+
+#selected-word {
+    height: 25px;
+}

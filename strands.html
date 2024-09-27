@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Game</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(6, 30px);
+            gap: 2px;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+        }
+        .cell.highlight {
+            background-color: yellow;
+        }
+        #wordInput {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Strands</h1>
+    <div id="grid" class="grid"></div>
+    <input type="text" id="wordInput" placeholder="Type a word to find">
+    <button onclick="checkWord()">Check Word</button>
+    <p id="message"></p>
+
+    <script src="strandsScript.js"></script>
+</body>
+</html>
