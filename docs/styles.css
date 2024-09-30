@@ -31,20 +31,31 @@ body {
 }
 
 .grid-item.selected {
-    border-color: #007bff; /* Blue border when selected */
+    background-color: rgb(219, 216, 197); /* Blue border when selected */
+}
+
+.grid-item.lastSelected {
+    background-color: rgb(219, 216, 197);
+    outline: rgb(219, 216, 197) solid 3px;
+    outline-offset: 3px;
 }
 
 .grid-item.correct {
-    border-color: #1ecc27; /* Blue border when selected */
+    background-color: rgb(174, 223, 238); /* Blue border when selected */
+}
+
+.grid-item.hint {
+    background-color: rgb(214, 29, 44); /* Blue border when selected */
 }
 
 .grid-item.spangram {
-    border-color: #ebe71d; /* Blue border when selected */
+    background-color: rgb(248, 203, 44); /* Blue border when selected */
 }
 
-.feedback {
+.counter {
     margin-top: 20px;
     font-weight: bold;
+    font-size: 20px;
 }
 
 
@@ -90,4 +101,46 @@ body {
 
 #selected-word {
     height: 25px;
+}
+
+.hintCounter {
+    font: 600 20px/130% nyt-franklin,Arial;
+    width: 148px;
+    height: 46px;
+    border-radius: 100px;
+    border: 2px solid #cfcfcf;
+    color: rgb(207, 207, 207);
+    background: rgba(0,0,0,0);
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+}
+
+.hintOverlay {
+    font: 600 20px/130% nyt-franklin,Arial;
+    color: black;
+    position: absolute;
+    width: 148px;
+    height: 46px;
+    border-radius: 100px;
+    border: 2px solid #cfcfcf;
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+}
+
+.empty {
+    clip-path: inset(0px 100% 0px 0px);
+}
+
+.first {
+    clip-path: inset(0px 66.67% 0px 0px);
+}
+
+.second {
+    clip-path: inset(0px 33.33% 0px 0px);
+}
+
+.full {
+    clip-path: inset(0px 0px 0px 0px);
 }
