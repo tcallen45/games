@@ -1,3 +1,13 @@
+Overall 
+
+- Front page design (pics of us?)
+- Link to IG video (unlocking of video?)
+- Menu between games
+- Validate usage on phone
+
+
+Strands
+
 D R E D U R
 U O O C T R
 A Q S F Y A
@@ -23,13 +33,25 @@ Taco bowl (8) - 50
 6x8 = 48
 
 
+Things to work on
+
+Need
+- Hint styling
+- Selected word text on bad word entered, word already entered scenarios
+- Win screen
+- General styling/spacing
+
+Nice to have
+- Lines between letters
+- Fix "R" conflict
+
 
 Connections
 
 Sports we've played - Basketball, Pickleball, Disc Golf, Bowling
 Our Weekend Mornings - Arsenal, Coffee, Farmer's market, Sex
 Our Weekday Evenings - Cooking, Dessert, Walk, TV
-Some reasons why I love you - Your smile,
+A few of the many reasons why I love you. (Your ____) - Smile, Honesty, Drive, Humor
 
 
 

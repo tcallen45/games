@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 10px;
+}
+
+.grid div {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: white; /* Default color */
+    transition: background-color 0.3s ease;
+    line-height: 1;
+    font-weight: bold;
+}
+
+/* .grid div {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+} */
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.keyboard button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgb(211, 214, 218);
+}
+
+.keyboard .button-text {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 75px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgb(211, 214, 218);
+}
+
+.keyboard button:hover {
+    background-color: #ddd;
+}
