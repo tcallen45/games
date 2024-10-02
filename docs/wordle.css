@@ -72,7 +72,7 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
     background-color: rgb(211, 214, 218);
-    color: black;
+    color: #000!important;
 }
 
 .keyboard .button-text {
@@ -85,7 +85,7 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
     background-color: rgb(211, 214, 218);
-    color: black;
+    color: #000!important;
 }
 
 .keyboard button:hover {
