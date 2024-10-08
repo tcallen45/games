@@ -11,6 +11,22 @@ const grayColor = 'rgb(' + 120 + ', ' + 124 + ', ' + 126 + ')';
 
 const apiUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
+var span = document.getElementsByClassName("close")[0];
+let modal = document.getElementById("winning-modal");
+
+let win = false;
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+} 
+
 // Generate the grid
 for (let i = 0; i < 30; i++) {
     const cell = document.createElement('div');
@@ -32,24 +48,26 @@ keyboard.addEventListener('click', function (e) {
 
 // Process the key input (either from virtual or physical keyboard)
 function handleKeyInput(key) {
-    key = key.toUpperCase();
+    if (!win) {
+        key = key.toUpperCase();
 
-    if (key.length === 1 && key >= 'A' && key <= 'Z') {
-        if (currentCol < 5) {
+        if (key.length === 1 && key >= 'A' && key <= 'Z') {
+            if (currentCol < 5) {
+                const index = currentRow * 5 + currentCol;
+                grid.children[index].innerText = key;
+                grid.children[index].style.border = "2px solid " + grayColor;
+                currentGuess += key.toLowerCase();
+                currentCol++;
+            }
+        } else if (key === 'BACKSPACE' && currentCol > 0) {
+            currentCol--;
             const index = currentRow * 5 + currentCol;
-            grid.children[index].innerText = key;
-            grid.children[index].style.border = "2px solid " + grayColor;
-            currentGuess += key.toLowerCase();
-            currentCol++;
-        }
-    } else if (key === 'BACKSPACE' && currentCol > 0) {
-        currentCol--;
-        const index = currentRow * 5 + currentCol;
-        grid.children[index].innerText = "";
-        currentGuess = currentGuess.slice(0, -1);
-    } else if (key === 'ENTER' && currentCol === 5) {
-        if (currentGuess.length === 5) {
-            checkGuess();
+            grid.children[index].innerText = "";
+            currentGuess = currentGuess.slice(0, -1);
+        } else if (key === 'ENTER' && currentCol === 5) {
+            if (currentGuess.length === 5) {
+                checkGuess();
+            }
         }
     }
 }
@@ -147,7 +165,8 @@ async function checkGuess() {
 
     // Clear current guess and move to next row
     if (currentGuess === targetWord) {
-        alert("You guessed it!");
+        modal.style.display = "block";
+        win = true;
     } else if (currentRow < 5) {
         currentGuess = "";
         currentRow++;

@@ -3,37 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Search Game</title>
-    <style>
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(6, 30px);
-            gap: 2px;
-        }
-        .cell {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #ddd;
-            font-family: Arial, sans-serif;
-        }
-        .cell.highlight {
-            background-color: yellow;
-        }
-        #wordInput {
-            margin: 20px 0;
-        }
-    </style>
+    <title>Strands</title>
+    <link rel="stylesheet" href="strands.css"> <!-- Link to the CSS file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>Strands</h1>
-    <div id="grid" class="grid"></div>
-    <input type="text" id="wordInput" placeholder="Type a word to find">
-    <button onclick="checkWord()">Check Word</button>
-    <p id="message"></p>
-
-    <script src="strandsScript.js"></script>
+    <div class="clue">
+        <div class="clue-label"><h3>Today's Theme</h3></div>
+        <h1 class="clue-hint">Chef Thomas</h1>
+    </div>
+    <div id="selected-word"></div>
+    <div class="grid-container" id="letterGrid"></div>
+    <!-- <button class="check-button" onclick="checkWord()">Check Word</button> -->
+    <div class="counter" id="counter"></div>
+    <div class="hint" id="hint">
+        <button class="hintOverlay empty" id="hintOverlay" onclick="checkHint()">Hint</button>
+        <button class="hintCounter" id="hintCounter">Hint</button>
+    </div>
+    <script src="strands.js"></script>
 </body>
 </html>

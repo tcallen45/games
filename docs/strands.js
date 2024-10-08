@@ -40,7 +40,7 @@ const hintWords = [];
 let selectedLetters = [];
 let word = "";
 let correctCount = 0;
-let hintCounter = 14;
+let hintCounter = 0;
 
 function initializeGame() {
     initializeGrid();

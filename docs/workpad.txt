@@ -30,10 +30,13 @@ Taco bowl (8) - 50
 
 
 
-6x8 = 48
+Overall Things to work on
+
+Need
+- Nav bar
 
 
-Things to work on
+Strands Things to work on
 
 Need
 - Hint styling
@@ -55,7 +58,8 @@ A few of the many reasons why I love you. (Your ____) - Smile, Honesty, Drive, H
 
 
 
-Wordle
+Wordle Things to work on
 
+Nice to have
+- Display guesses in winning modal
 
-PRIZE
