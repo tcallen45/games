@@ -10,7 +10,7 @@ const wordGroups = [
     [12, 13, 14, 15]// Group 4
 ];
 
-const groupCategories = ["Sports we've played", "Our Weekend Mornings", "Our Weekend Evenings", "A few of reasons I love you. (Your ____)"]
+const groupCategories = ["Sports we've played", "Our Weekend Mornings", "Our Weekday Evenings", "Reasons I love you. (Your ____)"]
 const groupWords = ["BASKETBALL, BOWLING, DISC GOLF, PICKLEBALL", "ARSENAL, COFFEE, FARMER'S MARKET, SEX", "COOKING, DESSERT, WALK, TV", "SMILE, HONESTY, DRIVE, HUMOR"]
 
 // Define colors for each group
@@ -19,12 +19,18 @@ const groupColors = ['#f9df6d', '#a0c35a', '#b0c4ef', '#ba81c5'];
 // Array to track available grid positions, each entry will be [row, column]
 let availableRows = [1,2,3,4];
 
-// Initialize grid positions for a 4x4 grid (row 1, col 1 corresponds to grid position 1)
-// for (let row = 1; row <= 4; row++) {
-//     for (let col = 1; col <= 4; col++) {
-//         availableGridPositions.push([row, col]);
-//     }
+let modal = document.getElementById("winning-modal");
+
+// span.onclick = function() {
+//     modal.style.display = "none";
 // }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+} 
 
 words.forEach(word => {
     word.addEventListener('click', () => {
@@ -38,15 +44,15 @@ words.forEach(word => {
         } else {
             selectedWords.push(wordId);
         }
-
-        // if (selectedWords.length === 4) {
-        //     checkSelection();
-        // }
     });
 });
 
 function checkSelection() {
     let isCorrect = false;
+
+    if (correctGroups === 4) {
+        return
+    }
 
     for (let i = 0; i < wordGroups.length; i++) {
         const group = wordGroups[i];
@@ -79,7 +85,7 @@ function markCorrect(groupIndex) {
     });
 
     if (correctGroups === 4) {
-        alert('Congratulations! You found all the connections!');
+        modal.style.display = "block";
     }
 }
 
@@ -127,19 +133,13 @@ function mergeWordsIntoBlock(wordsToMerge, groupIndex) {
     mergedBlock.style.backgroundColor = groupColor;  // Set the category color
 
     const subtext = document.createElement('p')
+    subtext.classList.add('merged-words')
     subtext.textContent = groupWords[groupIndex];
-    subtext.style.fontSize = "15px"
-    subtext.style.fontWeight = '400'
-    subtext.style.marginTop = '10px'
 
     // Position the merged block in the first available row
     const nextAvailableRow = availableRows.shift();  // Get the first available row and remove it from the array
     mergedBlock.style.gridRow = nextAvailableRow;    // Set it to the available row
     mergedBlock.style.gridColumn = '1 / span 4';     // Span across all 4 columns
-    mergedBlock.style.fontSize = '26px'
-    mergedBlock.style.textAlign = 'center'
-    mergedBlock.style.fontWeight = '600'
-    mergedBlock.style.paddingTop = '18px'
 
     mergedBlock.appendChild(subtext);
 

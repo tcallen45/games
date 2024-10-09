@@ -106,14 +106,29 @@ body {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 15%;
-    text-align: center;
+@media only screen and (min-width: 200px) {
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        text-align: center;
+    }
 }
+
+@media only screen and (min-width: 800px) {
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 15%;
+        text-align: center;
+    }
+}
+
+
 
 /* The Close Button */
 .close {
