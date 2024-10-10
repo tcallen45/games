@@ -20,8 +20,8 @@ body {
 @media only screen and (min-width: 0px) {
     .grid {
         display: grid;
-        grid-template-columns: repeat(4, 85px);  /* 4 columns */
-        grid-template-rows: repeat(4, 85px);     /* 4 rows */
+        grid-template-columns: repeat(4, 90px);  /* 4 columns */
+        grid-template-rows: repeat(4, 90px);     /* 4 rows */
         gap: 10px;
         margin-top: 20px;
     }
@@ -36,6 +36,7 @@ body {
         transition: background-color 0.3s ease;
         text-transform: uppercase;
         color: #000!important;
+        padding: 0;
     }
     .merged-category {
         font-size: 20px;
