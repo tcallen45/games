@@ -35,6 +35,7 @@ body {
         cursor: pointer;
         transition: background-color 0.3s ease;
         text-transform: uppercase;
+        color: #000!important;
     }
     .merged-category {
         font-size: 20px;
@@ -75,6 +76,7 @@ body {
         cursor: pointer;
         transition: background-color 0.3s ease;
         text-transform: uppercase;
+        color: #000!important;
     }
     .merged-category{
         font-size: 26px;
@@ -133,7 +135,7 @@ body {
 }
 
 #winning-modal {
-    display: block; /* Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
