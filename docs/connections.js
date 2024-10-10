@@ -19,11 +19,13 @@ const groupColors = ['#f9df6d', '#a0c35a', '#b0c4ef', '#ba81c5'];
 // Array to track available grid positions, each entry will be [row, column]
 let availableRows = [1,2,3,4];
 
+
+let span = document.getElementsByClassName("close")[0];
 let modal = document.getElementById("winning-modal");
 
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
