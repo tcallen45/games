@@ -42,6 +42,20 @@ let word = "";
 let correctCount = 0;
 let hintCounter = 0;
 
+var span = document.getElementsByClassName("close")[0];
+let modal = document.getElementById("winning-modal");
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+} 
+
 function initializeGame() {
     initializeGrid();
     updateHint();
@@ -132,6 +146,10 @@ function updateCounter() {
     const counter = document.getElementById('counter');
 
     counter.innerText = correctCount + " out of 6 Theme Words found"
+
+    if (correctCount === 6) {
+        modal.style.display = "block";
+    }
 }
 
 function clearSelected() {
@@ -185,11 +203,12 @@ function checkWord() {
         removeHint();
         markHintCompleted(submittedWord);
     } else if (hintWords.includes(submittedWord)) {
-        selectedWord.innerText = "Already submitted word"
-    } else if (checkExistence(submittedWord)) {
+        selectedWord.textContent = "Already submitted word"
+    } else if (wordExists(submittedWord)) {
         console.log("hint word");
+        selectedWord.textContent = "Word not in puzzle."
     } else {
-        selectedWord.innerText = "Not a word in list :("
+        selectedWord.textContent = "Not a word :("
     }
 
     clearSelected();
@@ -240,7 +259,7 @@ function convertToWord(selected) {
     return newWord;
 }
 
-async function checkExistence(word) {
+async function wordExists(word) {
     // Call api
     var url = apiUrl + word;
 
