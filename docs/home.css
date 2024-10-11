@@ -22,5 +22,30 @@ img {
 .games {
     margin-top: 50px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.game {
+    margin: 5px 0;
+}
+
+.strands {
+    background-color: rgb(192, 221, 217);
+}
+
+.wordle {
+    background-color: rgb(227,227,225);
+}
+
+.connections {
+    background-color: rgb(179, 167, 254);
+}
+
+@media only screen and (min-width: 800px) {
+    .games {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
 }

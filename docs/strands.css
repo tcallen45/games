@@ -103,6 +103,11 @@ body {
     height: 25px;
 }
 
+
+.game-title {
+    margin-bottom: 0;
+}
+
 .hintCounter {
     font: 600 20px/130% nyt-franklin,Arial;
     width: 148px;
