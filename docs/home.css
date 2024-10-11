@@ -37,6 +37,10 @@ img {
     background-color: rgb(227,227,225);
 }
 
+.us {
+    height: 200px;
+}
+
 .connections {
     background-color: rgb(179, 167, 254);
 }
