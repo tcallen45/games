@@ -7,8 +7,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
     background-color: #fff;
+    margin: 0;
+}
+
+.game-title {
+    margin-bottom: 0;
 }
 
 .game-container {

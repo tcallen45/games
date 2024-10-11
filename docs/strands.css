@@ -4,6 +4,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 0;
 }
 
 .grid-container {
@@ -43,7 +44,8 @@ body {
 }
 
 .grid-item.hint {
-    background-color: rgb(214, 29, 44); /* Blue border when selected */
+    border: rgb(174, 223, 238) dashed;
+    border-radius: 100%;
 }
 
 .grid-item.spangram {
@@ -65,7 +67,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 5px 0
+    margin: 5px auto;
 }
 
 .clue-label{
@@ -112,6 +114,7 @@ body {
     display: grid;
     place-content: center;
     font-weight: bold;
+    margin: 0 auto;
 }
 
 .hintOverlay {
@@ -125,6 +128,7 @@ body {
     display: grid;
     place-content: center;
     font-weight: bold;
+    margin-left: 18vh;
 }
 
 .empty {

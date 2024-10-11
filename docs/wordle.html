@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle</title>
     <link rel="stylesheet" href="wordle.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
     <div class="game">
-        <div class="navbar">
+        <div class="topnav" id="myTopnav">
             <div class="dropdown">
-              <button class="dropbtn">Games
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
+                <a href="./index.html">Home</a>
                 <a href="./connections.html">Connections</a>
                 <a href="./strands.html">Strands</a>
-              </div>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </div> 
         <div class="game-container">
             <h1>Wordle</h1>
@@ -79,6 +77,7 @@
         </div>
     </div>
     
+    <script src="navbar.js"></script>
     <script src="wordle.js"></script>
 </body>
 </html>

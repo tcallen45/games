@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strands</title>
     <link rel="stylesheet" href="strands.css"> <!-- Link to the CSS file -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-    <h1>Strands</h1>
-    <div class="clue">
-        <div class="clue-label"><h3>Today's Theme</h3></div>
-        <h1 class="clue-hint">Chef Thomas</h1>
+    <div class="game">
+        <div class="topnav" id="myTopnav">
+            <div class="dropdown">
+                <a href="./index.html">Home</a>
+                <a href="./connections.html">Connections</a>
+                <a href="./strands.html">Strands</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div> 
+        <h1>Strands</h1>
+        <div class="clue">
+            <div class="clue-label"><h3>Today's Theme</h3></div>
+            <h1 class="clue-hint">Chef Thomas</h1>
+        </div>
+        <div id="selected-word"></div>
+        <div class="grid-container" id="letterGrid"></div>
+        <!-- <button class="check-button" onclick="checkWord()">Check Word</button> -->
+        <div class="counter" id="counter"></div>
+        <div class="hint" id="hint">
+            <button class="hintOverlay empty" id="hintOverlay" onclick="checkHint()">Hint</button>
+            <button class="hintCounter" id="hintCounter">Hint</button>
+        </div>
     </div>
-    <div id="selected-word"></div>
-    <div class="grid-container" id="letterGrid"></div>
-    <!-- <button class="check-button" onclick="checkWord()">Check Word</button> -->
-    <div class="counter" id="counter"></div>
-    <div class="hint" id="hint">
-        <button class="hintOverlay empty" id="hintOverlay" onclick="checkHint()">Hint</button>
-        <button class="hintCounter" id="hintCounter">Hint</button>
-    </div>
+
+    <script src="navbar.js"></script>
     <script src="strands.js"></script>
 </body>
 </html>
