@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-    <h1>Happy Anniversary!</h1>
-    <h3><a href="./wordle.html">Wordle</a></h3>
-    <h3><a href="./connections.html">Connections</a></h3>
-    <h3><a href="./strands.html">Strands</a></h3>
+    <div class="home">
+        <div class="topnav" id="myTopnav">
+            <div class="dropdown">
+                <a href="./index.html">Home</a>
+                <a href="./connections.html">Connections</a>
+                <a href="./strands.html">Strands</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <h1>Happy Anniversary!</h1>
+
+        <div class="games">
+            <div class="game wordle">
+                <a class="image" href="./wordle.html"><img src="./wordle.png" alt="wordle"></a>
+                <h3><a href="./wordle.html">Wordle</a></h3>
+            </div>
+    
+            <div class="game connections">
+                <a class="image" href="./connections.html"><img src="./connections.png" alt="connections"></a>
+                <h3><a href="./connections.html">Connections</a></h3>
+            </div>
+            
+            <div class="game strands">
+                <a class="image" href="./strands.html"><img src="./strands.png" alt="strands"></a>
+                <h3><a href="./strands.html">Strands</a></h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="navbar.js"></script>
 </body>
 </html>

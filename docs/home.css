@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.home {
+    text-align: center;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 100px;
+}
+
+.games {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
