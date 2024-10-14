@@ -11,7 +11,7 @@ const wordGroups = [
 ];
 
 const groupCategories = ["Sports we've played", "Our Weekend Mornings", "Our Weekday Evenings", "Reasons I love you. (Your ____)"]
-const groupWords = ["BASKETBALL, BOWLING, DISC GOLF, PICKLEBALL", "ARSENAL, COFFEE, FARMER'S MARKET, SEX", "COOKING, DESSERT, WALK, TV", "SMILE, HONESTY, DRIVE, HUMOR"]
+const groupWords = ["BASKETBALL, BOWLING, DISC GOLF, PICKLEBALL", "ARSENAL, COFFEE, FARMER'S MARKET, CUDDLING", "COOKING, DESSERT, WALK, TV", "SMILE, HONESTY, DRIVE, HUMOR"]
 
 // Define colors for each group
 const groupColors = ['#f9df6d', '#a0c35a', '#b0c4ef', '#ba81c5'];
